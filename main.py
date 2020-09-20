@@ -38,12 +38,13 @@ class Game(object):
             if event.type == pygame.QUIT:
                 self.playing = False
                 self.running = False
-            elif event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_SPACE:
-                    self.change_sprite_control()
+            # elif event.type == pygame.KEYDOWN:
+            #     if event.key == pygame.K_SPACE:
+            #         self.change_sprite_control()
 
     def update(self):
-        self.sprite_in_control.update()
+        #self.sprite_in_control.update()
+        self.all_players.update()
 
     def draw(self):
         self.screen.fill(MARINHO)
@@ -51,10 +52,11 @@ class Game(object):
         pygame.display.flip()
 
     def change_sprite_control(self):
-        if self.sprite_in_control:
-            self.sprite_in_control.image.fill(GREEN)
+        # pass
+        # if self.sprite_in_control:
+        #     self.sprite_in_control.image.fill(GREEN)
         self.sprite_in_control = random.choice(self.all_players.sprites())  # random.choice(self.players_list)
-        self.sprite_in_control.image.fill(YELLOW)
+        # self.sprite_in_control.image.fill(YELLOW)
 
 
 g = Game()

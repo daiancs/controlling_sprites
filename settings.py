@@ -9,5 +9,5 @@ WIDTH = 850
 HEIGHT = 750
 TITLE = "Control random sprites"
 FPS = 30
-SPRITES_QTT = 10
+SPRITES_QTT = 40
 SPEED = 5  # Sprite moving speed
